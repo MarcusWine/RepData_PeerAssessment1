@@ -138,13 +138,13 @@ medianstepsimp - mediansteps
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-Determine weekday number: 
+Determine weekday number : 
 
 ```r
 act_no_na["weekdaynum"]<-as.POSIXlt(act_no_na$date)$wday
 ```
 
-Add new factor-variable
+Add  new factor-variable 
 
 ```r
 act_no_na["type_of_day"]<-sapply(act_no_na$weekdaynum,function(x) if(x<6){"weekday"} else{"weekend"} )

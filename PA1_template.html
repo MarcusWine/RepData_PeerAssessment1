@@ -126,7 +126,7 @@ medianstepsimp</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<p>Determine weekday number:</p>
+<p>Determine weekday number :</p>
 <pre class="r"><code>act_no_na[&quot;weekdaynum&quot;]&lt;-as.POSIXlt(act_no_na$date)$wday</code></pre>
 <p>Add new factor-variable</p>
 <pre class="r"><code>act_no_na[&quot;type_of_day&quot;]&lt;-sapply(act_no_na$weekdaynum,function(x) if(x&lt;6){&quot;weekday&quot;} else{&quot;weekend&quot;} )</code></pre>
