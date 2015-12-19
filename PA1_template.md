@@ -144,7 +144,7 @@ Determine weekday number:
 act_no_na["weekdaynum"]<-as.POSIXlt(act_no_na$date)$wday
 ```
 
-Add new Factor variable
+Add new factor-variable
 
 ```r
 act_no_na["type_of_day"]<-sapply(act_no_na$weekdaynum,function(x) if(x<6){"weekday"} else{"weekend"} )
